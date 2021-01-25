@@ -1,0 +1,36 @@
+<div class="container mt-5" style="background-color:#f1f1f1">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <td><button type="button" class="btn btn-dark" (click)="goToAddMed()">Add New Medicine</button>
+            </td>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="table-primary">
+                        <td>Medicine ID</td>
+                        <td>Name</td>
+                        <td> Brand </td>
+                        <td> Type</td>
+                        <td> Dosage Form</td>
+                        <td> Quantity</td>
+                        <td> Unit Price</td>
+                        <td> Action</td>
+                        <td> </td>
+                    </tr>
+                    <tr *ngFor="let med of med">
+                        <td>{{med.id}}
+                        <td>{{med.medname}}</td>
+                        <td>{{med.medbrand}}</td>
+                        <td>{{med.medtype}}</td>
+                        <td>{{med.meddosageform}}</td>
+                        <td>{{med.medinvqty}}</td>
+                        <td>{{med.medunitprice}}</td>
+                        <td><button type="button" class="btn btn-primary" (click)="goToeditMed(med.id)">Edit</button>
+                        </td>
+                        <td><button type="button" class="btn btn-dark" (click)="deleteMed(med.id)">Delete</button>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>

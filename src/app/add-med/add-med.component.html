@@ -1,0 +1,61 @@
+
+<div class="container" style="background-color:#f1f1f1">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <h4 class="mt-4 mb-4"> Add New Medicine <Form></Form></h4>
+            <form>
+                <fieldset>
+                    <div class="form group">
+                        <label for="medname">Medicine ID</label>
+                        <input type="text" name="id" [(ngModel)]="med.id" id="medid"  disabled class="form-control"
+                            placeholder="Auto - populated">
+                    </div>
+                    <div class="form group">
+                        <label for="medname">Medicine Name</label>
+                        <input type="text" name="medname" [(ngModel)]="med.medname" id="medname" class="form-control"
+                            placeholder="Enter your new Medcine name" required>
+                    </div>
+
+                    <div class="form group">
+                        <label for="medbrand">Medicine Brand</label>
+                        <input type="text" name="medbrand" [(ngModel)]="med.medbrand" id="medbrand" class="form-control"
+                            placeholder="Enter medicine brand" required>
+                    </div>
+
+                    <div class="form group">
+                        <label for="medtype">Medicine Type</label>
+                        <input type="text" name="medtype" [(ngModel)]="med.medtype" id="medtype" class="form-control"
+                            placeholder="Generic or Branded" required>
+                    </div>
+
+                    
+                    <div class="form group">
+                        <label for="meddosageform">Medicine Dosage  form </label>
+                        <input type="text" name="meddosageform" [(ngModel)]="med.meddosageform" id="meddosageform" class="form-control"
+                            placeholder="Enter Dosage Form" required>
+                    </div>
+
+                    <div class="form group">
+                        <label for="medinvqty">Medicine Quantity</label>
+                        <input type="text" name="medinvqty" [(ngModel)]="med.medinvqty" id="medinvqty" class="form-control"
+                            placeholder="Enter Quantity" required>
+                    </div>
+
+                    <div class="form group">
+                        <label for="medunitprice">Medicine Unit Price</label>
+                        <input type="text" name="medunitprice" [(ngModel)]="med.medunitprice" id="medunitprice" class="form-control"
+                            placeholder="Enter Unit Price" required>
+                    </div>
+                    
+                    <br>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit" value="Submit" (click) = "addmed()">
+
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>
